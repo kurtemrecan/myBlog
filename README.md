@@ -1,10 +1,10 @@
-# 🧩 Full-Stack Wappler Web Projesi
+# Full-Stack Wappler Web Projesi
 
 Bu proje, **Wappler** ile geliştirilmiş, tam işlevsel ve modüler yapıya sahip bir web uygulamasıdır. Uygulama, frontend ve backend yapılarını birleştiren, kullanıcı deneyimini ön planda tutan bir sistem sunar.
 
 ---
 
-## 🚀 Özellikler
+## Özellikler
 
 ### 🔧 Layout Sistemi
 - Tüm sayfalar **ana layout** dosyasına bağlanır.
@@ -13,7 +13,7 @@ Bu proje, **Wappler** ile geliştirilmiş, tam işlevsel ve modüler yapıya sah
 
 ---
 
-### 🏠 Ana Sayfa (Home)
+### Ana Sayfa (Home)
 - Gelişmiş **carousel bileşeni** kullanılarak dikkat çekici tanıtım alanı oluşturulmuştur.
 - Alt bölümde:
   - Bilgilendirici içerikler
@@ -25,12 +25,12 @@ Bu proje, **Wappler** ile geliştirilmiş, tam işlevsel ve modüler yapıya sah
 
 ---
 
-### 🧑‍💼 Hakkımızda Sayfası (About)
+### Hakkımızda Sayfası (About)
 - Statik içeriklerden oluşur.
 
 ---
 
-### 🛍️ Ürün Sayfası (Products)
+### Ürün Sayfası (Products)
 - API üzerinden dinamik olarak ürünler çekilir.
 - Kullanıcılar:
   - Ürünleri **sepete ekleyebilir**
@@ -43,7 +43,7 @@ Bu proje, **Wappler** ile geliştirilmiş, tam işlevsel ve modüler yapıya sah
 
 ---
 
-### 📬 İletişim Sayfası (Contact)
+### İletişim Sayfası (Contact)
 - Kullanıcıların site sahibine **e-posta göndermesi** sağlanır.
 - Gelişmiş form özellikleri:
   - **Form resetleme**
@@ -51,7 +51,7 @@ Bu proje, **Wappler** ile geliştirilmiş, tam işlevsel ve modüler yapıya sah
 
 ---
 
-## 🛠️ Teknolojiler
+## Teknolojiler
 
 | Katman | Kullanılan Teknoloji |
 |--------|-----------------------|
@@ -64,14 +64,14 @@ Bu proje, **Wappler** ile geliştirilmiş, tam işlevsel ve modüler yapıya sah
 
 ---
 
-## 🔐 Güvenlik & UX Detayları
+## Güvenlik & UX Detayları
 - Tüm formlar client-side ve server-side olarak doğrulanır.
 - Formlar gönderildikten sonra otomatik resetlenir.
 - Kullanıcı geri bildirimi için toast & notification desteği vardır.
 
 ---
 
-## 🧪 Durum
+## Durum
 > Bu proje şu an için geliştirme aşamasındadır. Ödeme sistemi devre dışıdır. Ancak UI/UX ve veri akışı test edilmektedir.
 
 ---
