@@ -1,0 +1,73 @@
+<!-- Wappler include head-page="layouts/main" is="dmx-app" id="productPage" appconnect="local" bootstrap5="cdn" fontawesome_5="cdn" components="{dmxGoogleDirections:{},dmxSlideshow:{},dmxTyped:{},dmxDatastore:{},dmxBootstrap5Modal:{},dmxBootstrap5TableGenerator:{},dmxFormatter:{}}" -->
+<div class="modal" id="modal1" is="dmx-bs5-modal" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Shopping Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody is="dmx-repeat" dmx-generator="bs5table" dmx-bind:repeat="cartStore.data" id="tableRepeat1">
+                        <tr>
+                            <td dmx-text="prd_name"></td>
+                            <td dmx-text="prd_price"></td>
+                            <td dmx-text="quantity"></td>
+                            <td>
+                                <button id="btn1" class="btn btn-primary btn-sm" dmx-bind:disabled="quantity==1"><i class="fas fa-minus-square" dmx-on:click="cartStore.update({$id: $id},{quantity: quantity-1})"></i></button>
+                                <button id="btn2" class="btn btn-primary btn-sm"><i class="fas fa-plus-square" dmx-on:click="cartStore.update({$id: $id},{quantity: quantity+1})"></i></button>
+                                <button id="btn3" class="btn btn-danger btn-sm" dmx-on:click="cartStore.delete({$id: $id})"><i class="far fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="text-end">Total Amount: {{cartStore.data.sum(`prd_price*quantity`)}} Tl</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" dmx-on:click="modal1.hide()">Continue Shopping</button>
+                <a href="/cart" class="btn btn-primary">Cart Page</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<meta name="ac:route" content="/productsPage">
+
+<section class="bg-white py-4" style="margin-top: 60px;">
+    <div class="container">
+        <div class="d-flex justify-content-between mb-4">
+            <h4>Products</h4>
+            <button id="btn4" class="btn btn-outline-info" dmx-on:click="modal1.show()">Shopping Cart {{cartStore.data.sum(`quantity`)}}</button>
+        </div>
+
+        <div class="row g-4" is="dmx-repeat" dmx-bind:repeat="serverconnect2.data.api.data.parseJSON()">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a class="text-decoration-none text-dark" dmx-bind:href="url">
+                    <div class="card h-100 rounded-3 products-card border-light-subtle shadow">
+                        <img dmx-bind:src="img" class="card-img-top" alt="Ürün Görseli" />
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="text-muted" dmx-text="brand"></h6>
+                            <h5 class="card-title" dmx-text="name"></h5>
+                            <p class="mb-2">
+                                <span class="text-dark fw-bold">₺<span dmx-text="price"></span></span>
+                                <span class="text-muted text-decoration-line-through ms-2" dmx-show="original_price &gt; price" dmx-text="original_price"></span>
+                            </p>
+                            <div class="mt-auto" dmx-on:click="">
+                                <button class="btn btn-sm w-100 btn-outline-success" dmx-on:click.prevent="cartStore.upsert({prd_id: $value.id},{prd_id: $value.id, prd_name: $value.name, prd_price: $value.price, quantity: 1});modal1.show()" style="margin-top: 2rem;"><i class="fas fa-cart-plus"></i>&nbsp;Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section><dmx-datastore id="cartStore"></dmx-datastore><dmx-serverconnect id="serverconnect2" url="/api/get_products_api" auto=""></dmx-serverconnect>

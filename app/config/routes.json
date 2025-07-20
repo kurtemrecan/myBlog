@@ -1,0 +1,35 @@
+{
+  "routes": [
+    {
+      "path": "/contact",
+      "page": "contact",
+      "layout": "main"
+    },
+    {
+      "path": "/about",
+      "page": "about",
+      "layout": "main"
+    },
+    {
+      "path": "/",
+      "page": "homePage",
+      "layout": "main"
+    },
+    {
+      "path": "/cart",
+      "page": "cart",
+      "layout": "main"
+    },
+    {
+      "path": "/productsPage",
+      "page": "productsPage",
+      "layout": "main",
+      "exec": "/api/get_products_api"
+    },
+    {
+      "path": "/payPage",
+      "page": "payPage",
+      "layout": "main"
+    }
+  ]
+}

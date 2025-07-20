@@ -1,0 +1,26 @@
+{
+  "contact.ejs": {
+    "layoutPage": "",
+    "description": ""
+  },
+  "about.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  },
+  "homePage.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  },
+  "productsPage.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  },
+  "cart.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  },
+  "payPage.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  }
+}

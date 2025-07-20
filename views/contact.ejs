@@ -1,0 +1,42 @@
+<!-- Wappler include is="dmx-app" id="contact" appConnect="local" bootstrap5="cdn" fontawesome_5="cdn" components="{dmxTyped:{}}" -->
+<div class="container"></div>
+
+<meta name="ac:route" content="/contact">
+<div class="container contact-container">
+    <div class="border border-1 rounded-3 border-dark-subtle shadow mt-4 pt-4 pb-4 ps-4 pe-4">
+        <form id="contactForm" method="post" is="dmx-serverconnect-form" action="/api/send_contact_email" dmx-on:submit="contactForm.submit(true)">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-7 col-md-5 text-center">
+                    <div class="fdb-box fdb-touch">
+                        <div class="row">
+                            <div class="col">
+                                <h1>Contact With Us</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mt-4">
+                                <input type="text" id="inp_username" name="username" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <input type="text" id="inp_email" name="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <input id="inp_message" name="message" class="form-control mb-1 form-control-lg" placeholder="message">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <button id="contact_submit" class="btn text-bg-primary" type="submit" dmx-on:click="run({serverConnect:{name:'sc',outputType:'object',url:'/api/send_contact_email',site:'myBlog'}})">Send
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

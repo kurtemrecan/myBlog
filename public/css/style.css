@@ -1,0 +1,162 @@
+/* CSS Document */
+
+#page-header {
+	/* padding: 180px 0 *//* background: url(http://via.placeholder.com/1920x1200) no-repeat center */
+	/* background-size: cover */
+}
+header h1 {
+	margin-bottom: 30px;
+}
+section {
+	padding: 60px 0;
+}
+h3.section-title {
+	margin-bottom: 20px;
+}
+.blog-text {
+	padding: 30px 15px !important;
+}
+#intro>.container {
+	margin-bottom: 30px;
+}
+.blog-text h5 {
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+.blog-text h4 {
+	font-size: 20px;
+}
+.btn-more {
+	margin-top: 20px;
+}
+#page-footer {
+    padding: 15px 0 10px;
+    font-size: 12px;
+}
+.navbar .nav-link  {
+  color: #ffffff !important;
+  font-weight: 600;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+.navbar .nav-link:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+.style1 {
+	background-size: 100% 100%;
+	background-image: url("../assets/images/banner/banner-wappler.png");
+	text-align: center;}
+.style2 {
+	background-size: auto;
+	width: auto;
+	background-position: center;
+}
+.style3 {
+	background-size: contain;
+}
+.style4 {
+	/* bottom: 0.5 */
+	/* position: absolute */
+	/* position: static */
+	/* bottom: 0 */
+}
+.style2 {}
+.wappler-temp {}
+.wappler-temp {}
+.style5 {}
+.wappler-temp {}
+.wappler-temp {}
+.wappler-temp {}
+.wappler-temp {}
+.wappler-temp {}
+.style6 {
+	position: absolute;
+	bottom: 55%;
+	right: 42%;
+}
+.cart-page {
+	margin-top: 100px;
+}
+.card-title {
+	 display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.products-card {
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.products-card:hover {
+		  border: #198754;
+}
+.payment {
+	margin-top: 90px;
+	padding: 40px 47px;
+}
+.contact-container {
+	margin-top: 90px;
+}
+@media (max-width: 768px) {
+  .carousel-item img {
+       -o-object-fit: cover !important;
+          object-fit: cover !important;
+  }
+  .payment {
+    border: none !important;
+  }
+  .carousel {
+	min-height: 45vh !important;
+  }
+  #page-header {
+	height: 50vh !important;
+  }
+}
+
+@media (min-width: 992px) {
+.style6 {
+		position: absolute;
+		bottom: auto;
+		right: auto;
+	}
+.style7 {
+		background-image: url("../assets/images/carousel/wappler-carousel2.png");
+	}
+.style8 {
+		background-image: url("../assets/images/carousel/wappler-carousel3.png");
+	}
+.style9 {
+		padding-top: 80px;
+	}
+	.contact-container {
+	max-width: 900px;
+}
+}
+.wappler-temp {}
+#page-header {
+}
+div.carousel-inner.h-100 {
+}
+div.carousel-inner.h-100 {
+}
+div.carousel-item.active.h-100 {
+}
+.style10 {
+	opacity: 0.5;
+}
+.style10 {
+	opacity: 1;}
+#main {
+
+}
+.wappler-temp {}
+.wappler-temp {}
+div.table-responsive {
+}
+.style11 {
+	text-align: center;
+}

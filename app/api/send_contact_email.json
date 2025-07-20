@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "text",
+        "name": "userName"
+      },
+      {
+        "type": "text",
+        "options": {
+          "rules": {
+            "core:email": {},
+            "core:required": {}
+          }
+        },
+        "name": "email"
+      },
+      {
+        "type": "text",
+        "name": "message"
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "",
+      "module": "mail",
+      "action": "send",
+      "options": {
+        "fromName": "{{$_POST.userName}}",
+        "fromEmail": "can.kurt764@gmail.com",
+        "replyTo": "{{$_POST.email}}",
+        "toEmail": "can.kurt764@gmail.com",
+        "toName": "Emre Can",
+        "subject": "İletişim Formu",
+        "instance": "mailer",
+        "contentType": "html",
+        "body": "<p>Yeni bir iletişim formu mesajı aldınız:</p>\n\n<p><strong>İsim:</strong> {{$_POST.userName}}</p>\n<p><strong>Email:</strong> {{$_POST.email}}</p>\n<p><strong>Mesaj:</strong><br>{{$_POST.message}}</p>\n"
+      },
+      "collapsed": true
+    }
+  }
+}

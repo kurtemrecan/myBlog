@@ -1,0 +1,108 @@
+<!-- Wappler include head-page="layouts/main" is="dmx-app" id="copy" appConnect="local" bootstrap5="cdn" fontawesome_5="cdn" components="{dmxBootstrap5Toasts:{},dmxTyped:{},dmxRouting:{},dmxSwiper:{}}" -->
+
+<meta name="ac:route" content="/">
+<header id="page-header" class="bg-light position-relative" style="height: 100vh;">
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel" style="min-height: 100vh;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+                <img src="/assets/images/banner/banner-wappler.png" class="d-block w-100 h-100 object-fit-cover" alt="...">
+            </div>
+            <div class="carousel-item h-100">
+                <img src="../assets/images/carousel/wappler-carousel2.png" class="d-block w-100 h-100 object-fit-cover style7" alt="...">
+            </div>
+            <div class="carousel-item h-100">
+                <img src="../assets/images/carousel/wappler-carousel3.png" class="d-block w-100 h-100 object-fit-cover style8" alt="...">
+            </div>
+        </div>
+
+        <!-- Butonlar -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+</header>
+<dmx-serverconnect id="sc_blog_posts" url="/api/get_blog_posts"></dmx-serverconnect>
+<section id="intro" class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h3 class="section-title">Section Heading</h3>
+                <p class="lead">Place a nice <strong>introduction</strong> here <strong>to catch reader's attention</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-12 col-sm-12 col-lg-5 order-1 order-lg-2"> <img class="img-fluid" src="../assets/images/carousel/wappler-carousel2.png"> </div>
+            <div class="col-12 col-sm-12 col-lg-7 bg-light blog-text order-2 order-lg-1">
+                <h5>Category</h5>
+                <h4>Blog Post Title</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <button type="button" class="btn btn-dark btn-sm">Read More</button>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-12 col-sm-12 col-lg-5 order-1 order-lg-1"> <img class="img-fluid" src="../assets/images/carousel/wappler-carousel3.png"> </div>
+            <div class="col-12 col-sm-12 col-lg-7 bg-white blog-text order-2 order-lg-2">
+                <h5>Category</h5>
+                <h4>Blog Post Title</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <button type="button" class="btn btn-dark btn-sm">Read More</button>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-12 col-sm-12 col-lg-5 order-1 order-lg-2"> <img class="img-fluid" src="/assets/images/banner/banner-wappler.png"> </div>
+            <div class="col-12 col-sm-12 col-lg-7 bg-light blog-text order-2 order-lg-1">
+                <h5>Category</h5>
+                <h4>Blog Post Title</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <button type="button" class="btn btn-dark btn-sm">Read More</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="bg-light">
+    <div class="container">
+        <form class="row" method="post" id="subscribeMail" role="form" action="/api/subscribe_user" is="dmx-serverconnect-form" dmx-on:submit="subscribeMail.submit()">
+            <div class="col-md-8 col-lg-6 ms-auto me-auto text-center">
+                <h3 class="section-title">Subscribe to Newsletter</h3>
+                <div class="input-group"><input type="text" class="form-control form-control-lg" placeholder="Enter your email address">
+                    <span class="input-group-btn">
+                        <button class="btn btn-dark btn-lg" type="button" dmx-on:click="run([{serverConnect:{name:'sc',outputType:'object',url:'/api/subscribe_user',site:'myBlog'}},{'toast.show':{message:'Congratulations! You have subscribed to the news!',icon:'fas fa-check',title:'Success'}}])" dmx-bind:disabled="!subscribeMail.checkValidity()">Subscribe
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<section class="bg-light">
+    <div class="container">
+        <form class="row" method="post" id="subscribeForm" is="dmx-serverconnect-form" action="/api/subscribe_user" dmx-on:success="notifies.success('Congratulations! You have subscribed to the news!')">
+            <div class="col-md-8 col-lg-6 ms-auto me-auto text-center">
+                <h3 class="section-title">Subscribe to Newsletter</h3>
+                <div class="input-group">
+                    <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+                    <span class="input-group-btn">
+                        <button class="btn btn-dark btn-lg" type="submit">
+                            Subscribe
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

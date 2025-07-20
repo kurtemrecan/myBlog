@@ -1,0 +1,11 @@
+{
+  "name": "mailer",
+  "module": "mail",
+  "action": "setup",
+  "options": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "username": "can.kurt764@gmail.com",
+    "password": "iiyhiuquzjnnfxir"
+  }
+}

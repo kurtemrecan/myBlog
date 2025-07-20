@@ -1,0 +1,215 @@
+{
+  "name": "api",
+  "module": "api",
+  "action": "send",
+  "options": {
+    "url": "https://gist.githubusercontent.com/sevindi/8bcbde9f02c1d4abe112809c974e1f49/raw/9bf93b58df623a9b16f1db721cd0a7a539296cf0/products.json",
+    "schema": [
+      {
+        "type": "text",
+        "name": "data"
+      },
+      {
+        "type": "object",
+        "name": "headers",
+        "sub": [
+          {
+            "type": "text",
+            "name": "accept-ranges"
+          },
+          {
+            "type": "text",
+            "name": "access-control-allow-origin"
+          },
+          {
+            "type": "text",
+            "name": "cache-control"
+          },
+          {
+            "type": "text",
+            "name": "content-length"
+          },
+          {
+            "type": "text",
+            "name": "content-security-policy"
+          },
+          {
+            "type": "text",
+            "name": "content-type"
+          },
+          {
+            "type": "text",
+            "name": "cross-origin-resource-policy"
+          },
+          {
+            "type": "text",
+            "name": "date"
+          },
+          {
+            "type": "text",
+            "name": "etag"
+          },
+          {
+            "type": "text",
+            "name": "expires"
+          },
+          {
+            "type": "text",
+            "name": "source-age"
+          },
+          {
+            "type": "text",
+            "name": "vary"
+          },
+          {
+            "type": "text",
+            "name": "via"
+          },
+          {
+            "type": "text",
+            "name": "x-cache"
+          },
+          {
+            "type": "text",
+            "name": "x-cache-hits"
+          },
+          {
+            "type": "text",
+            "name": "x-content-type-options"
+          },
+          {
+            "type": "text",
+            "name": "x-fastly-request-id"
+          },
+          {
+            "type": "text",
+            "name": "x-github-request-id"
+          },
+          {
+            "type": "text",
+            "name": "x-served-by"
+          },
+          {
+            "type": "text",
+            "name": "x-timer"
+          },
+          {
+            "type": "text",
+            "name": "x-xss-protection"
+          }
+        ]
+      }
+    ],
+    "data": [
+      {
+        "id": 1,
+        "brand": "HelloBaby",
+        "name": "Yenidoğan 6lı Ağız Mendili 24x24cm Unisex",
+        "url": "https://www.e-bebek.com/hellobaby-yenidogan-6li-agiz-mendili-24x24cm-unisex-p-24ghlbumnd007001",
+        "img": "https://cdn05.e-bebek.com/mnresize/300/300/media/p/organik-6li-agiz-mendili-24x24-cm_8682766103779_01.jpg",
+        "price": 89.99,
+        "original_price": 89.99
+      }
+    ],
+    "dataType": "json"
+  },
+  "output": true,
+  "meta": [
+    {
+      "type": "text",
+      "name": "data"
+    },
+    {
+      "type": "object",
+      "name": "headers",
+      "sub": [
+        {
+          "type": "text",
+          "name": "accept-ranges"
+        },
+        {
+          "type": "text",
+          "name": "access-control-allow-origin"
+        },
+        {
+          "type": "text",
+          "name": "cache-control"
+        },
+        {
+          "type": "text",
+          "name": "content-length"
+        },
+        {
+          "type": "text",
+          "name": "content-security-policy"
+        },
+        {
+          "type": "text",
+          "name": "content-type"
+        },
+        {
+          "type": "text",
+          "name": "cross-origin-resource-policy"
+        },
+        {
+          "type": "text",
+          "name": "date"
+        },
+        {
+          "type": "text",
+          "name": "etag"
+        },
+        {
+          "type": "text",
+          "name": "expires"
+        },
+        {
+          "type": "text",
+          "name": "source-age"
+        },
+        {
+          "type": "text",
+          "name": "vary"
+        },
+        {
+          "type": "text",
+          "name": "via"
+        },
+        {
+          "type": "text",
+          "name": "x-cache"
+        },
+        {
+          "type": "text",
+          "name": "x-cache-hits"
+        },
+        {
+          "type": "text",
+          "name": "x-content-type-options"
+        },
+        {
+          "type": "text",
+          "name": "x-fastly-request-id"
+        },
+        {
+          "type": "text",
+          "name": "x-github-request-id"
+        },
+        {
+          "type": "text",
+          "name": "x-served-by"
+        },
+        {
+          "type": "text",
+          "name": "x-timer"
+        },
+        {
+          "type": "text",
+          "name": "x-xss-protection"
+        }
+      ]
+    }
+  ],
+  "outputType": "object",
+  "collapsed": true
+}

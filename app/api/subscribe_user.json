@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "text",
+        "name": "id"
+      },
+      {
+        "type": "text",
+        "options": {
+          "rules": {
+            "core:required": {},
+            "core:email": {}
+          }
+        },
+        "name": "email"
+      },
+      {
+        "type": "text",
+        "name": "created_at"
+      }
+    ]
+  },
+  "exec": {
+    "steps": [
+      {
+        "name": "insert",
+        "module": "dbupdater",
+        "action": "insert",
+        "options": {
+          "connection": "db",
+          "sql": {
+            "type": "insert",
+            "values": [
+              {
+                "table": "newslatter_subscribers",
+                "column": "email",
+                "type": "text",
+                "value": "{{$_POST.email}}"
+              }
+            ],
+            "table": "newslatter_subscribers",
+            "query": "insert into `newslatter_subscribers` (`email`) values (?)",
+            "params": [
+              {
+                "name": ":P1",
+                "type": "expression",
+                "value": "{{$_POST.email}}",
+                "test": ""
+              }
+            ]
+          }
+        },
+        "meta": [
+          {
+            "name": "identity",
+            "type": "text"
+          },
+          {
+            "name": "affected",
+            "type": "number"
+          }
+        ],
+        "collapsed": true
+      },
+      {
+        "name": "succesResponse",
+        "module": "core",
+        "action": "response",
+        "options": {
+          "status": 200,
+          "data": "{  \"success\": true,  \"message\": \"Teşekkürler! E-posta adresiniz kaydedildi.\"}"
+        }
+      }
+    ]
+  }
+}

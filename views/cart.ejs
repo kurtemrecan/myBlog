@@ -1,0 +1,38 @@
+<!-- Wappler include head-page="layouts/main" is="dmx-app" id="productPage" appConnect="local" bootstrap5="cdn" components="{dmxDatastore:{},dmxBootstrap5TableGenerator:{},dmxBootstrap5Modal:{},dmxStripe:{}}" --><!-- Wappler include head-page="layouts/main" is="dmx-app" id="productPage" appconnect="local" bootstrap5="cdn" components="{dmxDatastore:{},dmxBootstrap5TableGenerator:{}}" -->
+<meta name="ac:route" content="/cart">
+<dmx-datastore id="cartStore"></dmx-datastore>
+
+<div class="container cart-page text-center">
+    <div class="table-responsive">
+
+        <p class="text-end">Total Amount: {{cartStore.data.sum(`prd_price*quantity`)}} Tl</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody is="dmx-repeat" dmx-generator="bs5table" dmx-bind:repeat="cartStore.data" id="tableRepeat1">
+                <tr>
+                    <td dmx-text="prd_name"></td>
+                    <td dmx-text="prd_price"></td>
+                    <td dmx-text="quantity"></td>
+                    <td>
+                        <button id="btn1" class="btn btn-primary btn-sm" dmx-bind:disabled="quantity==1"><i class="fas fa-minus-square" dmx-on:click="cartStore.update({$id: $id},{quantity: quantity-1})"></i></button>
+                        <button id="btn2" class="btn btn-primary btn-sm"><i class="fas fa-plus-square" dmx-on:click="cartStore.update({$id: $id},{quantity: quantity+1})"></i></button>
+                        <button id="btn3" class="btn btn-danger btn-sm" dmx-on:click="cartStore.delete({$id: $id})"><i class="far fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+<div class="container text-center">
+    <a href="/payPage" class="btn btn-outline-success text-center">Pass To Pay</a>
+</div>
