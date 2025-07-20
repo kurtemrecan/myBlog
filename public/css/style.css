@@ -101,6 +101,13 @@ h3.section-title {
 .contact-container {
 	margin-top: 90px;
 }
+.blurred-bg {
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 20px;
+  border-radius: 12px;
+}
 @media (max-width: 768px) {
   .carousel-item img {
        -o-object-fit: cover !important;
@@ -115,7 +122,13 @@ h3.section-title {
   #page-header {
 	height: 50vh !important;
   }
+  .blurred-bg {
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0);
+  }
 }
+
 
 @media (min-width: 992px) {
 .style6 {
@@ -132,9 +145,12 @@ h3.section-title {
 .style9 {
 		padding-top: 80px;
 	}
-	.contact-container {
+.contact-container {
 	max-width: 900px;
-}
+	}
+.vanta-canvas {
+	top: 120px !important;
+	}
 }
 .wappler-temp {}
 #page-header {

@@ -1,8 +1,11 @@
-<!-- Wappler include head-page="layouts/main" is="dmx-app" id="copy" appConnect="local" bootstrap5="cdn" fontawesome_5="cdn" components="{dmxBootstrap5Toasts:{},dmxTyped:{},dmxRouting:{},dmxSwiper:{}}" -->
+<!-- Wappler include head-page="layouts/main" is="dmx-app" id="homePage" appconnect="local" bootstrap5="cdn" fontawesome_5="cdn" components="{dmxBootstrap5Toasts:{},dmxTyped:{},dmxRouting:{},dmxSwiper:{},dmxNotifications:{}}" -->
+<div class="container">
+    <dmx-notifications id="notifies2" offset-y="75" closable="true"></dmx-notifications>
+</div>
 
 <meta name="ac:route" content="/">
 <header id="page-header" class="bg-light position-relative" style="height: 100vh;">
-    <!-- Carousel -->
+
     <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel" style="min-height: 100vh;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -21,7 +24,7 @@
             </div>
         </div>
 
-        <!-- Butonlar -->
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -33,7 +36,7 @@
 
     </div>
 </header>
-<dmx-serverconnect id="sc_blog_posts" url="/api/get_blog_posts"></dmx-serverconnect>
+
 <section id="intro" class="bg-white">
     <div class="container">
         <div class="row">
@@ -74,30 +77,16 @@
 
     </div>
 </section>
-<section class="bg-light">
+
+<section class="bg-light" dmx-on:click="">
     <div class="container">
-        <form class="row" method="post" id="subscribeMail" role="form" action="/api/subscribe_user" is="dmx-serverconnect-form" dmx-on:submit="subscribeMail.submit()">
-            <div class="col-md-8 col-lg-6 ms-auto me-auto text-center">
-                <h3 class="section-title">Subscribe to Newsletter</h3>
-                <div class="input-group"><input type="text" class="form-control form-control-lg" placeholder="Enter your email address">
-                    <span class="input-group-btn">
-                        <button class="btn btn-dark btn-lg" type="button" dmx-on:click="run([{serverConnect:{name:'sc',outputType:'object',url:'/api/subscribe_user',site:'myBlog'}},{'toast.show':{message:'Congratulations! You have subscribed to the news!',icon:'fas fa-check',title:'Success'}}])" dmx-bind:disabled="!subscribeMail.checkValidity()">Subscribe
-                        </button>
-                    </span>
-                </div>
-            </div>
-        </form>
-    </div>
-</section>
-<section class="bg-light">
-    <div class="container">
-        <form class="row" method="post" id="subscribeForm" is="dmx-serverconnect-form" action="/api/subscribe_user" dmx-on:success="notifies.success('Congratulations! You have subscribed to the news!')">
+        <form class="row" method="post" id="subscribeForm" is="dmx-serverconnect-form" action="/api/subscribe_user" dmx-on:success="notifies2.success('Thanks for subscribe us!');subscribeForm.reset(true)">
             <div class="col-md-8 col-lg-6 ms-auto me-auto text-center">
                 <h3 class="section-title">Subscribe to Newsletter</h3>
                 <div class="input-group">
                     <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
                     <span class="input-group-btn">
-                        <button class="btn btn-dark btn-lg" type="submit">
+                        <button class="btn btn-dark btn-lg align-self-end" type="submit">
                             Subscribe
                         </button>
                     </span>

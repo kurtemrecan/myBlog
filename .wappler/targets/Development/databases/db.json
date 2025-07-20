@@ -5,7 +5,49 @@
     "filename": "/db/db_dev.sqlite3"
   },
   "schema": {
-    "tables": {},
+    "tables": {
+      "newsletter_subscribe_user": {
+        "columns": {
+          "id": {
+            "db_edits": {
+              "name": "id",
+              "type": "increments"
+            },
+            "status": {
+              "new": true
+            }
+          },
+          "email": {
+            "db_edits": {
+              "type": "string",
+              "name": "email"
+            },
+            "status": {
+              "new": true
+            }
+          },
+          "created_at": {
+            "db_edits": {
+              "type": "timestamp",
+              "name": "created_at",
+              "maxLength": "",
+              "default": "knex.fn.now()"
+            },
+            "status": {
+              "new": true
+            }
+          }
+        },
+        "db": {},
+        "db_edits": {
+          "name": "newsletter_subscribe_user"
+        },
+        "status": {
+          "new": true,
+          "children_modified": true
+        }
+      }
+    },
     "views": {}
   }
 }

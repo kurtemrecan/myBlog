@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "options": {
+      "method": "post"
+    }
+  },
   "meta": {
     "$_POST": [
       {

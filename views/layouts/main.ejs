@@ -39,9 +39,12 @@
   <script src="/dmxAppConnect/dmxFormatter/dmxFormatter.js" defer></script>
   <script src="https://js.stripe.com/v3/" defer></script>
   <script src="/dmxAppConnect/dmxStripe/dmxStripe.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxNotifications/dmxNotifications.css" />
+  <script src="/dmxAppConnect/dmxNotifications/dmxNotifications.js" defer></script>
 </head>
 
 <body is="dmx-app" id="main" style="padding-top: 0px;">
+  <dmx-notifications id="notifies1"></dmx-notifications>
   <div class="main-wrapper d-flex flex-column min-vh-100 ">
     <nav class="navbar navbar-expand-lg fixed-top style10 bg-opacity-100 shadow-lg bg-dark w-auto opacity-75 text-white" data-bs-theme="dark" style="backdrop-filter: blur(6px);">
       <div class="container"> <a class="navbar-brand" href="#">My Blog</a>
@@ -56,8 +59,8 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                 <li><a class="dropdown-item" href="/productsPage">Products</a></li>
-                <li><a class="dropdown-item" href="/categories/design">Design</a></li>
                 <li><a class="dropdown-item" href="/cart">Cart</a></li>
+                <li><a class="dropdown-item" href="/payPage">Pay Page</a></li>
               </ul>
             </li>
             <li class="nav-item"> <a class="nav-link" href="/contact">Contact</a> </li>

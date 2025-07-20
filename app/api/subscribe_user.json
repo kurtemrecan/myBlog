@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "options": {
+      "method": "post"
+    }
+  },
   "meta": {
     "$_POST": [
       {
@@ -28,19 +33,20 @@
         "module": "dbupdater",
         "action": "insert",
         "options": {
-          "connection": "db",
+          "connection": "postgresWappler",
           "sql": {
             "type": "insert",
             "values": [
               {
-                "table": "newslatter_subscribers",
+                "table": "newsletter_subscribe_user",
                 "column": "email",
                 "type": "text",
                 "value": "{{$_POST.email}}"
               }
             ],
-            "table": "newslatter_subscribers",
-            "query": "insert into `newslatter_subscribers` (`email`) values (?)",
+            "table": "newsletter_subscribe_user",
+            "returning": "id",
+            "query": "insert into \"newsletter_subscribe_user\" (\"email\") values (?) returning \"id\"",
             "params": [
               {
                 "name": ":P1",
@@ -61,7 +67,7 @@
             "type": "number"
           }
         ],
-        "collapsed": true
+        "output": true
       },
       {
         "name": "succesResponse",
@@ -70,7 +76,8 @@
         "options": {
           "status": 200,
           "data": "{  \"success\": true,  \"message\": \"Teşekkürler! E-posta adresiniz kaydedildi.\"}"
-        }
+        },
+        "output": true
       }
     ]
   }

@@ -1,0 +1,50 @@
+{
+  "type": "postgres",
+  "connection": {
+    "host": "127.0.0.1",
+    "port": 5432,
+    "user": "postgres",
+    "password": "Canbus12.",
+    "database": "wappler"
+  },
+  "direct": true,
+  "schema": {
+    "schemas": [
+      "public"
+    ],
+    "tables": {
+      "newsletter_subscribe_user": {
+        "db": {
+          "schema": "public"
+        },
+        "columns": {
+          "id": {
+            "db": {
+              "type": "bigIncrements",
+              "primary": true,
+              "unique": true,
+              "nullable": false
+            }
+          },
+          "email": {
+            "db": {
+              "type": "text",
+              "primary": false,
+              "unique": false,
+              "nullable": true
+            }
+          },
+          "created_at": {
+            "db": {
+              "type": "timestamp",
+              "primary": false,
+              "unique": false,
+              "nullable": false
+            }
+          }
+        }
+      }
+    },
+    "views": {}
+  }
+}

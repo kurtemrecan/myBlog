@@ -1,0 +1,17 @@
+{
+  "name": "postgresWappler",
+  "module": "dbconnector",
+  "action": "connect",
+  "options": {
+    "client": "postgres",
+    "connection": {
+      "host": "127.0.0.1",
+      "port": 5432,
+      "user": "postgres",
+      "password": "Canbus12.",
+      "database": "wappler"
+    },
+    "tz": "utc"
+  },
+  "fileName": "postgresWappler.json"
+}
