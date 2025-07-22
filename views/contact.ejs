@@ -2,10 +2,11 @@
 
 <meta name="ac:route" content="/contact">
 <div class="container contact-container">
-    <dmx-notifications id="notifies1">
+    <dmx-notifications id="notifies2"></dmx-notifications>
+    <dmx-notifications id="notifiesError">
     </dmx-notifications>
     <div class="border border-1 rounded-3 border-dark-subtle shadow mt-4 pt-4 pb-4 ps-4 pe-4">
-        <form id="contactForm" method="post" is="dmx-serverconnect-form" action="/api/send_contact_email" dmx-on:success="notifies1.success('Thank you for contact us!');contactForm.reset(true)">
+        <form id="contactForm" method="post" is="dmx-serverconnect-form" action="/api/send_contact_email" dmx-on:success="notifies2.success('Thank you for contact us!');contactForm.reset(true)" dmx-on:error="notifiesError.error('Please enter a valid email address!')">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 col-lg-7 col-md-5 text-center">
                     <div class="fdb-box fdb-touch">
@@ -21,7 +22,7 @@
                         </div>
                         <div class="row mt-4">
                             <div class="col">
-                                <input type="text" id="inp_email" name="email" class="form-control" placeholder="Email" is="dmx-input" value="">
+                                <input type="text" id="inp_email" name="email" class="form-control" placeholder="Email" is="dmx-input" value="" required>
                             </div>
                         </div>
                         <div class="row mt-4">

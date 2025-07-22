@@ -30,6 +30,11 @@
       "path": "/payPage",
       "page": "payPage",
       "layout": "main"
+    },
+    {
+      "path": "/forRoute",
+      "page": "forRoute",
+      "layout": "main"
     }
   ]
 }

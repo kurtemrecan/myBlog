@@ -22,5 +22,9 @@
   "payPage.ejs": {
     "layoutPage": "main",
     "description": ""
+  },
+  "forRoute.ejs": {
+    "layoutPage": "main",
+    "description": ""
   }
 }
