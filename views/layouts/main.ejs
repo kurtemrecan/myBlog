@@ -24,6 +24,15 @@
   <link rel="stylesheet" href="/dmxAppConnect/dmxSlideshow/dmxSlideshow.css" />
   <script src="/dmxAppConnect/dmxSlideshow/dmxSlideshow.js" defer></script>
   <link rel="stylesheet" href="/dmxAppConnect/dmxSlideshow/themes/default.css" />
+
+  <script src="/dmxAppConnect/dmxDatastore/dmxDatastore.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootstrap5Modal/dmxBootstrap5Modal.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxBootstrap5TableGenerator/dmxBootstrap5TableGenerator.css" />
+  <script src="/dmxAppConnect/dmxFormatter/dmxFormatter.js" defer></script>
+  <script src="https://js.stripe.com/v3/" defer></script>
+  <script src="/dmxAppConnect/dmxStripe/dmxStripe.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxNotifications/dmxNotifications.css" />
+  <script src="/dmxAppConnect/dmxNotifications/dmxNotifications.js" defer></script>
   <script>
     dmx.Formatter('string', 'parseJSON', function(value) {
       try {
@@ -33,14 +42,13 @@
       }
     });
   </script>
-  <script src="/dmxAppConnect/dmxDatastore/dmxDatastore.js" defer></script>
-  <script src="/dmxAppConnect/dmxBootstrap5Modal/dmxBootstrap5Modal.js" defer></script>
-  <link rel="stylesheet" href="/dmxAppConnect/dmxBootstrap5TableGenerator/dmxBootstrap5TableGenerator.css" />
-  <script src="/dmxAppConnect/dmxFormatter/dmxFormatter.js" defer></script>
-  <script src="https://js.stripe.com/v3/" defer></script>
-  <script src="/dmxAppConnect/dmxStripe/dmxStripe.js" defer></script>
-  <link rel="stylesheet" href="/dmxAppConnect/dmxNotifications/dmxNotifications.css" />
-  <script src="/dmxAppConnect/dmxNotifications/dmxNotifications.js" defer></script>
+  <script>
+    dmx.Formatters['toFixed'] = function(val, digits) {
+  if (val == null) return '';
+  return Number(val).toFixed(digits);
+};
+
+  </script>
 </head>
 
 <body is="dmx-app" id="main" style="padding-top: 0px;">
